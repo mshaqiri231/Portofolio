@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Muzafer Shaqiri - Skills</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Muzafer Shaqiri</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="portofolio.html">Portfolio</a>
+      <a href="skills.html">Skills</a>
+    </nav>
+  </header>
+
+  <div class="container fade-in">
+    <h2>Skills</h2>
+    <ul>
+      <li>PHP (Procedural, Laravel, Symfony)</li>
+      <li>JavaScript / React</li>
+      <li>HTML / Tailwind CSS</li>
+      <li>MySQL / Postgres</li>
+      <li>API integration</li>
+      <li>Performance optimization</li>
+      <li>Version control: Git</li>
+    </ul>
+  </div>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      document.querySelectorAll('.fade-in').forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 50) {
+          el.classList.add('visible');
+        }
+      });
+    });
+    window.dispatchEvent(new Event('scroll'));
+  </script>
+</body>
+</html>

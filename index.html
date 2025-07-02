@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Muzafer Shaqiri - Home</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+</head>
+<body>
+  <header>
+    <h1 class="slide-down">Muzafer Shaqiri</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="portofolio.html">Portfolio</a>
+      <a href="skills.html">Skills</a>
+    </nav>
+  </header>
+
+  <div class="container fade-in">
+    <div class="profile-card">
+      <img src="images/muza.jpeg" alt="Profile Image" class="profile"/>
+      <div class="info">
+        <h2>Muzafer Shaqiri</h2>
+        <p><i class="fa-solid fa-cake-candles"></i> 18/07/1998</p>
+        <p><i class="fa-solid fa-flag"></i> Albanian</p>
+        <p><i class="fa-solid fa-person"></i> Male</p>
+        <p><i class="fa-solid fa-location-dot"></i> Ulpiane, 10000 Prishtina, Kosovo</p>
+        <p><i class="fa-solid fa-envelope"></i> shaqirimuzafer1@gmail.com</p>
+        <p><i class="fa-solid fa-phone"></i> (+383) 45675694</p>
+      </div>
+    </div>
+    <h2>About Me</h2>
+    <p>
+      Web developer with solid experience in PHP and frameworks like Laravel and Symfony, specializing in building robust, scalable applications. Proficient in relational databases and crafting efficient back-end systems, with a strong understanding of front-end technologies including JavaScript and React framework, HTML, and Tailwind CSS. Adept at creating seamless, user-friendly interfaces and collaborating with teams to deliver high-quality, maintainable solutions. Continuously learning and adapting to stay ahead in the fast-evolving web development landscape.
+    </p>
+  </div>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      document.querySelectorAll('.fade-in').forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 50) {
+          el.classList.add('visible');
+        }
+      });
+    });
+    window.dispatchEvent(new Event('scroll'));
+  </script>
+</body>
+</html>
